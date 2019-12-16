@@ -2,9 +2,9 @@
 
 import sys
 import json
-import subprocess
 import os
 import shutil
+
 
 def run():
     _, metadata_path, pdf_path = sys.argv
@@ -21,16 +21,16 @@ def run():
     shutil.copy(metadata_path, metadata_dst)
 
     exe = "make"
-    args = [ exe,
-        "PRODUCT_ID=" + str(metadata['product_id']),
-        "TITLE=" + metadata['title'],
-        "BLURB=" + metadata['blurb'],
-        "PDF_PATH=" + pdf_path
-    ]
+    args = [exe,
+            "PRODUCT_ID=" + str(metadata['product_id']),
+            "TITLE=" + metadata['title'],
+            "BLURB=" + metadata['blurb'],
+            "PDF_PATH=" + pdf_path]
 
     os.chdir(os.path.dirname(__file__))
     os.chdir("pdf_to_book_reader")
     sys.exit(os.execvp(exe, args))
+
 
 if __name__ == '__main__':
     run()
