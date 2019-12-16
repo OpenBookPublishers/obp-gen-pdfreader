@@ -8,7 +8,6 @@ This suite installs the relevant processing tools, and runs them on a
 set of three files:
 
 * `book.pdf`
-* `book.epub`
 * `book.json`
 
 and yields the conventional HTML pages and image output (in odd locations).
@@ -25,7 +24,7 @@ To run:
 ```
 
 Where `prefix` is the common name for your book files, e.g., `Wolfthal-Pogroms_Ukraine`, entails that you have files `Wolfthal-Pogroms_Ukraine.json`,
-`Wolfthal-Pogroms_Ukraine.pdf` and `Wolfthal-Pogroms_Ukraine.epub`
+`Wolfthal-Pogroms_Ukraine.pdf`
 
 To do
 -----
@@ -39,7 +38,7 @@ invocation ought to look something like this:
 
 ## DEV
 ### Submodules
-External projects are managed via _git submodules_. **epublius** and **pdf_to_book_reader** modules can be updated with confidence, whereas the other two projects require to specific branches/commits to allow `obp-gen-readers` to work properly. In particular:
+External projects are managed via _git submodules_. **pdf_to_book_reader** module can be updated with confidence, whereas the other two projects require to specific branches/commits to allow `obp-gen-readers` to work properly. In particular:
  -  **PDF-Mine** needs to track the `obp` branch;
  -  **pdfminer** head needs to be `14fd0fd2d6ef4e709731377decc6a8c119e5e9d6`.
 
