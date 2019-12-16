@@ -1,6 +1,5 @@
 
-Overview
-========
+# Overview
 
 Tooling for generating OBP's PDF and HTML readers from metadata.
 
@@ -26,8 +25,7 @@ To run:
 Where `prefix` is the common name for your book files, e.g., `Wolfthal-Pogroms_Ukraine`, entails that you have files `Wolfthal-Pogroms_Ukraine.json`,
 `Wolfthal-Pogroms_Ukraine.pdf`
 
-To do
------
+# To do
 
 Generate the JSON file directly from a metadata database. Ultimately the
 invocation ought to look something like this:
@@ -35,6 +33,16 @@ invocation ought to look something like this:
     ./run 10.11647/OBP.0125
 ```
 
+## Run with docker
+```
+docker run --rm \
+  -v /path/to/local.pdf:/ebook_automation/pdf_file.pdf \
+  -v /path/to/local.json:/ebook_automation/pdf_file.json \
+  -v /path/to/output:/ebook_automation/pdf_to_book_reader/output \
+  openbookpublishers/obp-gen-pdfreader
+```
+
+Alternatively you may clone the repo, build the image using `docker build . -t some/tag` and run the command above replacing `openbookpublishers/obp-gen-pdfreader` with `some/tag`.
 
 ## DEV
 ### Submodules
