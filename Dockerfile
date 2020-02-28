@@ -18,6 +18,7 @@ RUN mv pdf_to_book_reader-${PDF_TO_BOOK_READER_VERSION} pdf_to_book_reader/
 RUN git clone https://github.com/euske/pdfminer.git
 
 COPY ./ ./
+COPY ./policy-thick-books.xml /etc/ImageMagick-6/policy.xml
 
 ENV OUTDIR=/ebook_automation/output
 
