@@ -12,6 +12,7 @@ def run():
         metadata = json.load(f)
 
     metadata_dir = os.path.join(".", "pdf_to_book_reader",
+                                'output',
                                 str(metadata['product_id']))
     metadata_dst = os.path.join(metadata_dir,
                                 "book_metadata.json")
